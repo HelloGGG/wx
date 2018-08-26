@@ -1,0 +1,151 @@
+page{
+  background-color: #000;
+}
+
+.search_box{
+  display: flex;
+  width:100%;
+  height: 100rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.search_box input{
+  box-sizing: border-box;
+  width: 70%;
+  margin-left:30rpx;
+  background: #000;
+  height: 100%; 
+  color: #fff;
+  border-radius: 50rpx;
+  border: 1rpx solid #707070;
+  padding-left: 50rpx;
+}
+
+.search_box button{
+  width: 20%;
+  background: #000;
+  color: #fff;
+  height: 100%;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.title_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.command_title{
+  font-size: 40rpx;
+  color:#fff;
+  padding-left: 30rpx;
+  margin:30rpx 0;
+}
+
+.user{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 70rpx;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.box image{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+
+.title{
+  width: 55%;
+  color:#fff;
+  font-size: 40rpx;
+  text-indent: 2em;
+  box-sizing: border-box;
+  padding: 60rpx;
+}
+
+
+
+
+.my_container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  box-sizing: border-box;
+  background: #000;
+}
+
+.left{
+  width: 14%;
+  height: 100%;
+}
+
+.left image{
+  width: 100%;
+  height: 100%;
+}
+.right{
+  display: flex;
+  flex-direction: row;
+  width: 86%;
+  height: 100%;
+}
+
+.descript{
+  width: 85%;
+  height: 100%;
+}
+
+.play_icon{
+  position: relative;
+  width: 15%;
+  height:100%;
+}
+
+.play_icon image{
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+
+.m_title{
+  margin-top: 5px;
+  padding-left: 10px;
+  color: #fff;
+  font-size: 15px;
+  overflow: hidden;
+} 
+
+.m_info{
+  padding-left: 10px;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #cecece;
+  overflow: hidden;
+}

@@ -1,0 +1,17 @@
+<scroll-view scroll-y="true" wx:if="{{results}}" class="scroll_view">
+  <view class="my_container" wx:for="{{results}}">
+    <view class="left">
+      <image src="{{item.poster}}" />
+    </view>
+    <view class="right">
+      <view class="descript">
+         <view class="m_title">{{item.title}}</view>
+        <view class="m_info">{{item.singer}} - {{item.album}}</view>
+      </view>
+      <view class="play_icon">
+        <image id="{{index}}" src="../../images/index_music/play.png" bindtap='toplay'/>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

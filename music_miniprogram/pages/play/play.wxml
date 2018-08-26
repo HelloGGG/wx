@@ -1,0 +1,45 @@
+<image class="bottom_bg" mode="aspectFill" src="{{music.poster}}"/>
+<image class="play_bg" mode="aspectFill" src="{{music.poster}}"/>
+<view class="play_container">
+  <view class="header">
+    <view class="title">{{music.title}}</view>
+    <view class="info">{{music.singer}} - {{music.album}}</view>
+  </view>  
+  <!-- <view class="border" style="background: url('../../images/play_music/coverall.png') no-repeat -143px -580px;animation-play-state:{{status}};" ></view> -->
+  <view class="body" bindtap='show_lyric'>
+  <image class="circle" src="{{music.poster}} " hidden='{{lyric}}' style="animation-play-state:{{status}};"/>
+  <!-- <view class="lyric"  hidden='{{!lyric}}'> -->
+  <scroll-view scroll-y="true" scroll-into-view="{{target}}" scroll-with-animation="true" class="lyric"  hidden='{{!lyric}}'>
+    <view class="blank"></view>
+    <block wx:for='{{lyric_arr}}'>
+       <view wx:if="{{lyric_id == index}}" id="ly{{index}}" class="single_lyric"  style="color:red">{{item[1]}}</view>
+       <view wx:else class="single_lyric" id="ly{{index}}" style="color:#cecece">{{item[1]}}</view>
+    </block>
+  </scroll-view> 
+  <!-- </view> -->
+  </view>
+
+  <view class="footer">
+  <view class="time">
+    <view class="current_time">{{currentTime}}</view>
+    <slider class="progress" min="0" max="100" step="1" value="{{percent}}" block-size="15" activeColor="red" bindchange="change_currentTime" bindchanging=""></slider>
+    <view class="total_time">{{totalTime}}</view>
+  </view>
+  
+
+  <view class="control">
+      <view class="icon_box" hidden="{{play_mode.list}}"><image src="../../images/play_music/list.png" bindtap='change_to_single'/></view>
+       <view class="icon_box" hidden="{{play_mode.single}}"><image src="../../images/play_music/single.png" bindtap='change_to_random'/></view>
+      <view class="icon_box" hidden="{{play_mode.random}}"><image src="../../images/play_music/random.png" bindtap='change_to_list'/></view>
+
+      <view class="icon_box"><image src="../../images/play_music/pre.png" bindtap='pre'/></view>
+      <view hidden="{{isPlay}}"  class="icon_box"><image src="../../images/play_music/play.png" bindtap='play'/></view>
+      <view hidden="{{isPause}}"  class="icon_box"><image src="../../images/play_music/pause.png" bindtap='pause'/></view>
+      <view class="icon_box"><image src="../../images/play_music/next.png" bindtap='next'/></view>
+      <view class="icon_box" hidden='{{favorite}}'><image src="../../images/play_music/favorite.png" bindtap='my_favorite'/></view>
+      <view class="icon_box" hidden='{{!favorite}}'><image src="../../images/play_music/selected_favorite.png" bindtap='my_favorite'/></view>
+  </view>
+
+  </view>
+
+</view>

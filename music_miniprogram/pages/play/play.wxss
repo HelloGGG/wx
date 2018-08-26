@@ -1,0 +1,132 @@
+page{
+  overflow: hidden;
+}
+.bottom_bg{
+  z-index: -3;
+	height: 100%;
+	width: 100%; 
+	position: fixed;
+  filter: blur(10rpx)
+}
+.play_bg {
+	z-index: -2;
+	height: 100%;
+	width: 100%; 
+	position: fixed;
+  filter: blur(30rpx) brightness(0.5);
+}
+
+.play_container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.title{
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  padding: 50rpx 50rpx 30rpx 50rpx;
+}
+
+.info{
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.header{
+  width: 100%;
+  height: 20vh;
+}
+
+.body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.footer{
+  width: 100%;
+  height: 20vh;
+}
+
+.blank{
+  height: 40%;
+  width:100%;
+}
+
+.lyric{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lyric  .single_lyric{
+  margin:30px 5px; 
+  text-align: center;
+  font-size: 15px;
+}
+
+.circle{
+  display: block;
+  height:380rpx;
+  width: 380rpx;
+  border-radius: 190rpx;
+  margin-top:100rpx;
+  animation: myrotate 10s linear infinite;
+}
+
+.time{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  align-items: center;
+}
+
+.current_time,.total_time{
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  font-size: 25rpx;
+}
+
+.progress{
+  width: 70%;
+}
+
+.control{
+  display: flex;
+  height: 80%;
+  flex-direction: row;
+}
+
+.icon_box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+
+.icon_box image{
+  display: block;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+@keyframes myrotate { 
+    0% {
+      transform: rotate(0deg)  
+    } 
+    100% {  
+        transform: rotate(360deg)  
+    }  
+}  
+  
+
